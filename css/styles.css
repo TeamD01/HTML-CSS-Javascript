@@ -1,0 +1,21 @@
+body {
+    background: #af1b1b;
+    font-size: 16px;
+}
+
+.container {
+    margin: 0 auto;
+
+.article-header{
+    margin-bottom: 20px;
+}
+
+.article-header-title{
+        font-weight: bold;
+        color: rgb(124, 19, 19);
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
