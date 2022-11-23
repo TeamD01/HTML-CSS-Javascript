@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin:1em 3 em 4em;
+            padding:0.5;
+            background-color: green;
+        }
+        div:first-child{
+            background-color: lightgray;
+        }
+        div.Foods{
+            background-color: black;
+            color:yellow;
+        }
+        #binge-watch{
+            background-color: lightblue;
+        }
+        #binge-watch div{
+            background-color: maroon;
+        }
+        #binge-watch>div>ul>li{
+            color: lightblue;
+            font-style: italic;
+}
+    </style>
+
+
+</head>
+<body>
+    <div>
+        <ul>
+            <caption>Foods</caption>
+            <li>Turkey</li>
+            <li>Potatoes</li>
+            <li>Cheesecake</li>
+        </ul>
+    </div>>
+
+    <div>
+        <ul>
+            <caption>Movies</caption>
+            <li>Movie1</li>
+            <li>Movie2</li>
+            <li>Movie3</li>
+        </ul>
+    </div>
+
+    <div>
+        <div id="binge-watch">
+            <ul>
+                <caption>binge-watch></caption>
+                <li>Football</li>
+                <li>Basketball</li>
+                <li>Baseball</li>
+            </ul>
+        </div>  
+    </div>
+
+</body>
+</html>
