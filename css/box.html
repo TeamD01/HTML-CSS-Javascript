@@ -14,9 +14,12 @@
             color: blue;
             outline: 1pt solid green;
             outline-offset: 5px;
-            width: 30em;
+            width: 25%;
+            max-width: 15em;
+            min-width: 10em;
             box-sizing: border-box;
             height: 10em;
+              
         }
 
         div:hover{
@@ -25,18 +28,28 @@
 
         body{
             font-size: 12pt;
+           /* display: flex;
+            justify-content: space-evenly;*/
+
+        
         }
 
+        p{
+            position: relative;
+            top: 5em;
+            left: 5em;
+            
+
+        }
     </style>
 </head>
 
 
 <body>
-    <div>
-        <h1>Box</h1>
-            
-
-    </div>
     
+        <div><p>Box1</p></div>
+        <div>Box2</div>
+        <div>Box3</div>
+        
 </body>
 </html>
