@@ -6,61 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            margin:1em 3 em 4em;
-            padding:0.5;
-            background-color: green;
-        }
-        div:first-child{
-            background-color: lightgray;
-        }
-        div.Foods{
-            background-color: black;
-            color:yellow;
-        }
-        #binge-watch{
-            background-color: lightblue;
-        }
-        #binge-watch div{
-            background-color: maroon;
-        }
-        #binge-watch>div>ul>li{
-            color: lightblue;
-            font-style: italic;
-}
+    div {
+        margin: 1em;
+        padding: 0.5em;
+      }
+      .fav-food {
+        background-color: white;
+        font-style: italic;
+      }
+      #fav-movie {
+        background-color: black;
+        color: yellow;
+      }
+      .binge-show {
+        background-color: lightblue;
+      }
+      .binge-show > div {
+        background-color: maroon;
+        color: lightblue;
+      }
     </style>
 
 
-</head>
 <body>
-    <div>
-        <ul>
-            <caption>Foods</caption>
-            <li>Turkey</li>
-            <li>Potatoes</li>
-            <li>Cheesecake</li>
-        </ul>
-    </div>>
-
-    <div>
-        <ul>
-            <caption>Movies</caption>
-            <li>Movie1</li>
-            <li>Movie2</li>
-            <li>Movie3</li>
-        </ul>
+    <h1>Selector Exercise</h1>
+    <div class="fav-food">
+      <p>Favorite Food</p>
+      <ul>
+        <li>Turkey</li>
+        <li>Potatoes</li>
+        <li>Apple Pie</li>
+      </ul>
     </div>
-
-    <div>
-        <div id="binge-watch">
-            <ul>
-                <caption>binge-watch></caption>
-                <li>Football</li>
-                <li>Basketball</li>
-                <li>Baseball</li>
-            </ul>
-        </div>  
+    <div id="fav-movie">
+      <p>Favorite Movie</p>
+      <ul>
+        <li>Movie1</li>
+        <li>Movie2</li>
+        <li>Movie3</li>
+      </ul>
     </div>
+    <div class="binge-show">
+      <div>
+        <p>Binge-Watch Shows</p>
+        <ul>
+          <li>Football</li>
+          <li>Basketball</li>
+          <li>Baseball</li>
+        </ul>
+      </div>
+    </div>
+  
 
 </body>
-</html>
