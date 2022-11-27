@@ -1,24 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navigation Bar</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css"
-    </head>
-    <body>
-        <div id="main">
-            <nav>
-                <img src="TeamD.jpg">
-                <ul>
-                    <li><a href="#">Logo</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Monahan Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<style>
+    
+    /*Line separator*/
+    hr.rounded {
+      border-top: 8px solid red;
+      border-radius: 5px;
+    }
+    
+    .button {
+        position: relative;
+        left: 40%;
+        background-color:red;
+        border: none;
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 2px 1px;
+        cursor: pointer;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: black;
+    }
+
+    .flex-container > div {
+        background-color: black;
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 30px;
+        color: white;
+    }
+</style>
+
+
+
+
+
+<body>
+    <header>
+        <img src="TeamD.jpg" alt="A Logo" width="100" height="100">
+        
+        <nav>
+            <ul>
+                <li><a href="TeamDWordCloud.jpeg">About</a></li>
+                <li><a href="Resume-David-Monahan.pdf">Resume</a></li>
+                <li><a href="https://www.youtube.com/watch?v=tTflIh5sU-Q">Projects</a></li>
+                <li><a href="BCard.png">Contact</a></li>
+                
+            </ul>   
+        </nav>   
+    </header>
+    
+    <p>Rounded</p>
+        <hr class="rounded">
+    
+        <div class="flex-container">
+            <div><img src="TeamD.jpg" alt="a picture" width="150" height="150"/> </div>
+            <div><p>A.S. Electronics Engineering<br>B.A. Computer Science<br>MBA  Applied Computer Science<br>TODO PhD Dissertation</p></div>  
+          </div>
+        
+
+        <p>Rounded</p>
+        <hr class="rounded">
+
+        
+        <a href="TestProject.jar" class="button">Project1</a>
+        <a href="#" class="button">Project2</a>
+        <a href="Capstone" class="button">Coming Feb 2022</a>
+
+        <p>Rounded</p>
+        <hr class="rounded">
+
+        <a href="Resume-David-Monahan.pdf" class="button">Resume</a>
+
+        <p>Rounded</p>
+        <hr class="rounded">
+    
+        <a href="https://www.linkedin.com/in/david-monahan-b8bb84221/" class="button">LinkedIn</a>
+        <a href="https://github.com/TeamD01" class="button">GitHub</a>
+
+        
+</body>
 </html>
