@@ -29,6 +29,14 @@
         height: 300px;
         width: 300px;
     }
+    .reposition {
+        background-color: lightcoral;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 50px;
+        right: 100px;
+    }
 }
 
 @media (min-width: 600px) {
@@ -40,6 +48,14 @@
         background-color: black;
         height: 500px;
         width: 500px;
+    }
+    .reposition {
+        background-color: lightgreen;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 150px;
+        right: 200px;
     }
 }
 
