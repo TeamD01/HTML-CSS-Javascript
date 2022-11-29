@@ -1,205 +1,459 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+      .row {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
 
+  <!-- 1) Add a navbar with a button that says "Add" -->
+  <!-- 2) when add button is clicked a modal will appear -->
+  <!-- 3) Add form to to modal -->
+  <!-- 4) Form should have an input for image, title and description -->
+  <!-- 5) add save button to add form  -->
+  <!-- 6) 4 rows x 4 columns of replace cards with image, title and description-->
+  <!-- 7) Each card will have an update and delete button -->
+  <!-- 8) When update is clicked a modal is opened with form that has update inputs  and a save button -->
+  <!-- 9) When delete button is clicked, a modal will ask "Are you sure you want to delete? - there will be two buttons that say "Confirm or Cancel"" -->
 
-</head>
-<style>
-    .col-md-3{
-        border: solid 1px black;
-    }
-
-</style>
-<body>
-    <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand">Cookies!!!</a>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">Add</button>
-          </form>
-        </div>
-      </nav>
-      
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/10/14/0/FNK_POINSETTIA_PINWHEEL_COOKIES_H_f_s4x3.jpg.rend.hgtvcom.966.725.suffix/1602697398437.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Poinsettia Pinwheel Cookies</h5>
-                  <p class="card-text">Despite the intricate design, these festive pinwheels are simple to create. The cream cheese in the cookie dough adds just the right amount of pliability, so you can cut, fold and shape with ease. </p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/10/28/0/FNK_Reindeer-Mask-Cookies_H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1572274426198.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Reindeer Mask Cookies</h5>
-                  <p class="card-text">With these playful cookies, everyone can join in the reindeer games.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/9/19/0/FNK_Minty-Christmas-Tree-Cutout-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1474344079697.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Minty Christmas Tree Cutout Cookies</h5>
-                  <p class="card-text">Lined up in a row on a platter, these cute treats are sure to get your guests in the holiday spirit. The cookies are tender but hold their shape when baked (so you end up with precise Christmas trees, not Christmas blobs). And adding mint makes them extra special.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/11/4/0/12-Days-of-Cookies_Macaroons-016_s4x3.jpg.rend.hgtvcom.966.725.suffix/1382539568448.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Barefoot Contessa's Coconut Macaroons</h5>
-                  <p class="card-text">Simple and decadent, Ina's Coconut Macaroons make great take-along, cookie-tin treats.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-        </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/9/15/1/FNK_Classic-Sugar-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1442375394752.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Classic Sugar Cookies</h5>
-                  <p class="card-text">These familiar cookies have crispy edges (thanks to superfine sugar) and a slightly soft middle. The small amount of baking powder ensures that they puff just a little without spreading too much — so they're perfect for cut-outs in all your favorite holiday shapes.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/9/20/1/FNK_Eggnog-Meltaway-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1474401761266.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Eggnog Meltaway Cookies</h5>
-                  <p class="card-text">The secret to these cookies' melt-in-your-mouth texture is the confectioners' sugar, which easily comes together with almonds in a food processor. The flavors of rum, bourbon and nutmeg make the little snowball look-alikes taste just like your favorite holiday drink. We'll say "cheers" to that!</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/9/17/0/FNK_PENGUIN-SLICE-BAKE-COOKIES-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1505668947215.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Penguin Slice-and-Bake Cookies</h5>
-                  <p class="card-text">Not all the holiday fun happens at the North Pole. These South Pole denizens are the season's cutest critters. Have fun shaping and rolling colorful sugar cookie dough so that every slice produces a perfect penguin.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/09/14/0/FNK_Citrus-Crinkle-Cookies_H2_s4x3.jpg.rend.hgtvcom.966.725.suffix/1600119998046.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Citrus Crinkle Cookies</h5>
-                  <p class="card-text">These soft-and-chewy cookies are positively bursting with bright citrus flavor. We created this versatile recipe to highlight whatever citrus fruit you like the best — try tart lemon, zesty lime or sweet orange. A few drops of food coloring add a vibrant visual cue. These cookies are equally festive during the summer or winter months.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-        </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/9/17/0/BX0509H_White-Chocolate-Bark_s4x3.jpg.rend.hgtvcom.966.725.suffix/1411074381467.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">White Chocolate Bark</h5>
-                  <p class="card-text">Making candy sounds like a really complicated thing to do, which is why Ina likes to make chocolate bark, which is quite simple. Temper white chocolate in the microwave, a foolproof way that also cuts down on prep time. Once the chocolate is poured onto a baking sheet, add your favorite toppings and then let it harden. Ina chose items that look good and taste good together: pistachios, cranberries and apricots.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/10/28/0/FNK_Pan-Banging-Pecan-Cookies_H1_s4x3.jpg.rend.hgtvcom.966.725.suffix/1572274421880.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pan-Banging Pecan Snickerdoodle Cookies</h5>
-                  <p class="card-text">We packed these cookies with cinnamon, pecans and chocolate toffee chunks for the ultimate snickerdoodle experience--and then added one finishing touch. Inspired by blogger Sarah Kieffer's internet-famous crinkled chocolate chip cookies, we pulled the snickerdoodles out of the oven midway through cooking and banged the baking sheet on the counter, producing a cookie with the best of both worlds--crispy ripples around the edge and a soft, chewy center.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/9/17/0/FNK_CHEESECAKE-RED-VELVET-COOKIES-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1505668742885.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Cheesecake-Stuffed Red Velvet Cookies</h5>
-                  <p class="card-text">The classic flavors of red velvet cake are transformed into cookies with the cream cheese baked right inside.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/9/17/0/FN_Millionare-Shortbread-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1411090355371.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Millionaire Shortbread Cookies</h5>
-                  <p class="card-text">Marc Murphy takes shortbread cookies to a whole new level by layering the traditional recipe with dark chocolate and homemade cookie butter. Garnish the glistening squares with flaky salt before serving.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-        </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/9/15/1/FNK_Peppermint-Meringues_s4x3.jpg.rend.hgtvcom.966.725.suffix/1442375394490.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Peppermint Meringues</h5>
-                  <p class="card-text">These minty, pink-striped meringues are easy to make and use a clever decorating trick: Paint lines of food coloring gel up the sides of a pastry bag before filling it with meringue, and each cookie will come out striped as you pipe it. You can use this same trick with frosting for cupcakes.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/10/22/0/FNK_M&M-MAGIC-BARS-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1540223504712.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">M&M Magic Bars</h5>
-                  <p class="card-text">This quick and easy bake-sale classic goes over the top for the holidays — we've loaded the bars with your favorite Christmas candies.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/12/22/0/BX0110_Dried-Fruit-Cookies.jpg.rend.hgtvcom.966.725.suffix/1386712336451.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Ina's Fruitcake Cookies</h5>
-                  <p class="card-text">"Many years ago Lee Bailey, the wonderful cookbook writer, asked me to make 600 pounds of these cookies to sell at his store and I still love them," says Ina. "They're not only totally delicious (don't think fruitcake — think cookies) but you can make rolls of the dough, refrigerate them and just slice and bake them off as you need them all throughout the holidays."</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/11/5/0/12-days-of-cookies-2009_alex-gingerbread_s4x3.jpg.rend.hgtvcom.966.725.suffix/1397700405926.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Gingerbread Cookies</h5>
-                  <p class="card-text">Roll into the holidays — and our season-long cookie fest — with Alex Guarnaschelli's crisp gingerbread men spiked with ginger, cinnamon, nutmeg and allspice.</p>
-                  <a href="#" class="btn btn-primary">Add</a>
-                  <a href="#" class="btn btn-primary">Delete</a>
-                </div>
-              </div>
-        </div>
-  <header>
-    <!-- place navbar here -->
-    
-  </header>
-  <main>
+      <header>
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand">Cookies</a>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Add
+            </button>
 
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Modal title
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="imageUrl" class="form-label"
+                          >Image Url</label
+                        >
+                        <input
+                          class="form-control"
+                          id="imageUrl"
+                          type="url"
+                          name="imageUrl"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input
+                          class="form-control"
+                          id="title"
+                          type="text"
+                          id="url"
+                          name="title"
+                        />
+                      </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-</body>
+                      <div class="mb-3">
+                        <label for="description" class="form-label"
+                          >Description</label
+                        >
+                        <input
+                          class="form-control"
+                          id="description"
+                          type="text"
+                          name="description"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
 
+      <main>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/8/1/0/FNK_GINGERBREAD-MAN-MUG-MATES-H_s4x3.jpg.rend.hgtvcom.966.773.suffix/1533148664162.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Gingerbread Man Mug Mates</h5>
+                <p class="card-text">
+                    These gingerbread men are people-pleasers — you'll love how they hang around with lots of holiday spirit.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/10/14/0/FNK_POINSETTIA_PINWHEEL_COOKIES_H_f_s4x3.jpg.rend.hgtvcom.966.725.suffix/1602697398437.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Poinsettia Pinwheel Cookies</h5>
+                <p class="card-text">
+                    Despite the intricate design, these festive pinwheels are simple to create. The cream cheese in the cookie dough adds just the right amount of pliability, so you can cut, fold and shape with ease. We decorated the cookies with white, red and green coarse sanding sugar, sometimes called pearlized sugar, but you can feel free to swap in plain confectioners' sugar. They'll look stunning either way!
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/10/28/0/FNK_Reindeer-Mask-Cookies_H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1572274426198.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Reindeer Mask Cookies</h5>
+                <p class="card-text">
+                    With these playful cookies, everyone can join in the reindeer games.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/9/19/0/FNK_Minty-Christmas-Tree-Cutout-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1474344079697.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Minty Christmas Tree Cutout Cookies</h5>
+                <p class="card-text">
+                    Lined up in a row on a platter, these cute treats are sure to get your guests in the holiday spirit. The cookies are tender but hold their shape when baked (so you end up with precise Christmas trees, not Christmas blobs). And adding mint makes them extra special.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/11/4/0/12-Days-of-Cookies_Macaroons-016_s4x3.jpg.rend.hgtvcom.966.725.suffix/1382539568448.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Barefoot Contessa's Coconut Macaroons</h5>
+                <p class="card-text">
+                    Simple and decadent, Ina's Coconut Macaroons make great take-along, cookie-tin treats.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/9/15/1/FNK_Classic-Sugar-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1442375394752.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Classic Sugar Cookies</h5>
+                <p class="card-text">
+                    These familiar cookies have crispy edges (thanks to superfine sugar) and a slightly soft middle. The small amount of baking powder ensures that they puff just a little without spreading too much — so they're perfect for cut-outs in all your favorite holiday shapes.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/9/20/1/FNK_Eggnog-Meltaway-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1474401761266.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Eggnog Meltaway Cookies</h5>
+                <p class="card-text">
+                    The secret to these cookies' melt-in-your-mouth texture is the confectioners' sugar, which easily comes together with almonds in a food processor. The flavors of rum, bourbon and nutmeg make the little snowball look-alikes taste just like your favorite holiday drink. We'll say "cheers" to that!
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/9/17/0/FNK_PENGUIN-SLICE-BAKE-COOKIES-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1505668947215.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Penguin Slice-and-Bake Cookies</h5>
+                <p class="card-text">
+                    Not all the holiday fun happens at the North Pole. These South Pole denizens are the season's cutest critters. Have fun shaping and rolling colorful sugar cookie dough so that every slice produces a perfect penguin.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/09/14/0/FNK_Citrus-Crinkle-Cookies_H2_s4x3.jpg.rend.hgtvcom.966.725.suffix/1600119998046.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Citrus Crinkle Cookies</h5>
+                <p class="card-text">
+                    These soft-and-chewy cookies are positively bursting with bright citrus flavor. We created this versatile recipe to highlight whatever citrus fruit you like the best — try tart lemon, zesty lime or sweet orange. A few drops of food coloring add a vibrant visual cue. These cookies are equally festive during the summer or winter months.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/9/17/0/BX0509H_White-Chocolate-Bark_s4x3.jpg.rend.hgtvcom.966.725.suffix/1411074381467.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">White Chocolate Bark</h5>
+                <p class="card-text">
+                    Making candy sounds like a really complicated thing to do, which is why Ina likes to make chocolate bark, which is quite simple. Temper white chocolate in the microwave, a foolproof way that also cuts down on prep time. Once the chocolate is poured onto a baking sheet, add your favorite toppings and then let it harden. Ina chose items that look good and taste good together: pistachios, cranberries and apricots.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/10/28/0/FNK_Pan-Banging-Pecan-Cookies_H1_s4x3.jpg.rend.hgtvcom.966.725.suffix/1572274421880.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pan-Banging Pecan Snickerdoodle Cookies</h5>
+                <p class="card-text">
+                    We packed these cookies with cinnamon, pecans and chocolate toffee chunks for the ultimate snickerdoodle experience--and then added one finishing touch. Inspired by blogger Sarah Kieffer's internet-famous crinkled chocolate chip cookies, we pulled the snickerdoodles out of the oven midway through cooking and banged the baking sheet on the counter, producing a cookie with the best of both worlds--crispy ripples around the edge and a soft, chewy center.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/9/17/0/FNK_CHEESECAKE-RED-VELVET-COOKIES-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1505668742885.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cheesecake-Stuffed Red Velvet Cookies</h5>
+                <p class="card-text">
+                    The classic flavors of red velvet cake are transformed into cookies with the cream cheese baked right inside.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/9/17/0/FN_Millionare-Shortbread-Cookies_s4x3.jpg.rend.hgtvcom.966.725.suffix/1411090355371.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Millionaire Shortbread Cookies</h5>
+                <p class="card-text">
+                    Marc Murphy takes shortbread cookies to a whole new level by layering the traditional recipe with dark chocolate and homemade cookie butter. Garnish the glistening squares with flaky salt before serving.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/9/15/1/FNK_Peppermint-Meringues_s4x3.jpg.rend.hgtvcom.966.725.suffix/1442375394490.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Peppermint Meringues</h5>
+                <p class="card-text">
+                    These minty, pink-striped meringues are easy to make and use a clever decorating trick: Paint lines of food coloring gel up the sides of a pastry bag before filling it with meringue, and each cookie will come out striped as you pipe it. You can use this same trick with frosting for cupcakes.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/10/22/0/FNK_M&M-MAGIC-BARS-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1540223504712.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">M&M Magic Bars</h5>
+                <p class="card-text">
+                    This quick and easy bake-sale classic goes over the top for the holidays — we've loaded the bars with your favorite Christmas candies.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/12/22/0/BX0110_Dried-Fruit-Cookies.jpg.rend.hgtvcom.966.725.suffix/1386712336451.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ina's Fruitcake Cookies</h5>
+                <p class="card-text">
+                    "Many years ago Lee Bailey, the wonderful cookbook writer, asked me to make 600 pounds of these cookies to sell at his store and I still love them," says Ina. "They're not only totally delicious (don't think fruitcake — think cookies) but you can make rolls of the dough, refrigerate them and just slice and bake them off as you need them all throughout the holidays."
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
