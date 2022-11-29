@@ -69,6 +69,14 @@
         height: 700px;
         width: 700px;
     }
+    .reposition {
+        background-color: darkblue;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 200px;
+        right: 300px;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -81,6 +89,14 @@
         height: 900px;
         width: 900px;
     }
+    .reposition {
+        background-color: darkred;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 400px;
+        right: 400px;
+    }
 }
 
 @media (min-width: 1281px) {
@@ -92,5 +108,13 @@
         background-color: black;
         height: 1100px;
         width: 1100px;
+    }
+    .reposition {
+        background-color: darkgrey;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 500px;
+        right: 500px;
     }
 }
