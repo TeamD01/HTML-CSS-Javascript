@@ -3,9 +3,7 @@ const cards = document.querySelectorAll('.card');
 let isFlipped = false, isLocked = false, firstCard, secondCard;
 
 function flipCard() {
-    if (isLocked) 
-        return;
-    if (this === firstCard) 
+    if ((isLocked) || (this === firstCard))                         /*no double clicking*/ 
         return;
     this.classList.add('flip');
 
@@ -30,8 +28,8 @@ function isMatch() {
 function disableCard() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    firstCard.style.opacity ="0";
-    secondCard.style.opacity ="0";
+    firstCard.style.opacity ="0";                                   /* turning off first card */
+    secondCard.style.opacity ="0";                                  /* turning off second card */
     resetGame();
 }
 
