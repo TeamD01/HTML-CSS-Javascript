@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Cookies</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -29,7 +29,7 @@
   <!-- Add form to to modal -->
   <!-- Form should have an input for image, title and description -->
   <!-- add save button to add form  -->
-  <!--  4 rows x 4 columns of replace cards with image, title and desciption-->
+  <!--  4 rows x 4 columns of replace cards with image, title and description-->
   <!-- Each card will have an update and delete button -->
 
   <!-- When update is clicked a modal is opened with form that has update inputs and a save button -->
@@ -118,13 +118,7 @@
                     >
                       Close
                     </button>
-                    <button
-                      type="button"
-                      id="savePostButton"
-                      class="btn btn-primary"
-                    >
-                      Save
-                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
                   </div>
                 </div>
               </div>
@@ -135,51 +129,6 @@
 
       <main>
         <div class="row"></div>
-
-        <!-- Delete Modal -->
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="deleteModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Delete Post
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Are you sure you would like to delete?
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  id="deleteCardButton"
-                  class="btn btn-primary"
-                >
-                  Confirm
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
@@ -195,121 +144,109 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="./js/list.js"></script>
+
     <script>
-      const createUpdateModal = document.querySelector("#createUpdateModal");
-      let saveModalBtn = document.querySelector("#savePostButton");
-      let deleteModalBtn = document.querySelector("#deleteCardButton");
+      document
+        .querySelector("#createUpdateModal")
+        .addEventListener("show.bs.modal", (e) => {
+          debugger;
 
-      const deleteModal = document.querySelector("#deleteModal");
-
-      var imageUrl = document.querySelector("#imageUrl").value;
-      var title = document.querySelector("#title").value;
-      var description = document.querySelector("#description").value;
-      var existingCars = [];
-      JSON.parse(localStorage.getItem("cars")) === null
-        ? (existingCars = [])
-        : (existingCars = JSON.parse(localStorage.getItem("cars")));
-
-      for (i = 0; i < existingCars.length; i++) {
-        carCard = `
-      <div class="col-md-3">
-              <div class="card" data-car-id=${existingCars[i].id}>
-                <img
-                  src="${existingCars[i].image}"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">${existingCars[i].title}</h5>
-                  <p class="card-text">
-                    ${existingCars[i].description}
-                  </p>
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#createUpdateModal"
-                    >Update</button>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#deleteModal"
-                    >Delete</button>
-                  </div>
+          const contentCard = `
+       <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/8/1/0/FNK_GINGERBREAD-MAN-MUG-MATES-H_s4x3.jpg.rend.hgtvcom.966.773.suffix/1533148664162.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="btn-container">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#updateModal"
+                  >
+                    Update
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteModal"
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             </div>
-      `;
+          </div>
+       `;
 
-        document.querySelector(".row").insertAdjacentHTML("beforeend", carCard);
-      }
+          const columnCard = document.createElement("div");
+          columnCard.setAttribute("class", "col-md-3");
 
-      let updating = false;
+          const card = document.createElement("div");
+          card.setAttribute("class", "card");
 
-      deleteModal.addEventListener("show.bs.modal", (e) => {
-        deleteModalBtn.addEventListener("click", () => {
-          let foundCar = existingCars.find(
-            (car) =>
-              car.id ===
-              Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
+          const img = document.createElement("img");
+          img.setAttribute(
+            "src",
+            "https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
           );
-          existingCars.splice(existingCars.indexOf(foundCar), 1);
+          img.setAttribute("class", "card-img-top");
 
-          localStorage.setItem("cars", JSON.stringify(existingCars));
-          location.reload();
+          const cardBody = document.createElement("div");
+          cardBody.setAttribute("class", "card-body");
+
+          const title = document.createElement("h5");
+          title.setAttribute("class", "card-title");
+          title.innerText = "Card title";
+          const p = document.createElement("p");
+          p.setAttribute("class", "card-text");
+          p.innerText =
+            "Some quick example text to build on the card title and make up the bulk of the card's content.";
+          const btnContainer = document.createElement("div");
+          btnContainer.setAttribute("class", "btn-container");
+
+          card.append(img);
+
+          card.append(cardBody);
+
+          cardBody.append(title);
+          cardBody.append(p);
+          cardBody.append(btnContainer);
+
+          const updateBtn = document.createElement("button");
+
+          updateBtn.setAttribute("type", "button");
+          updateBtn.setAttribute("class", "btn btn-primary");
+          updateBtn.setAttribute("data-bs-toggle", "modal");
+          updateBtn.setAttribute("data-bs-target", "#updateModal");
+          updateBtn.innerText = "Update";
+
+          const deleteBtn = document.createElement("button");
+
+          deleteBtn.setAttribute("type", "button");
+          deleteBtn.setAttribute("class", "btn btn-primary");
+          deleteBtn.setAttribute("data-bs-toggle", "modal");
+          deleteBtn.setAttribute("data-bs-target", "#deleteModal");
+
+          deleteBtn.innerText = "Delete";
+
+          btnContainer.append(updateBtn);
+          btnContainer.append(deleteBtn);
+
+          columnCard.append(card);
+
+          document.querySelector(".row").append(columnCard);
         });
-      });
-
-      deleteModal.addEventListener("hide.bs.modal", (e) => {
-        oldModalBtn = deleteModalBtn;
-        newModalBtn = oldModalBtn.cloneNode(true);
-        oldModalBtn.parentNode.replaceChild(newModalBtn, oldModalBtn);
-        deleteModalBtn = newModalBtn;
-      });
-
-      createUpdateModal.addEventListener("show.bs.modal", (e) => {
-        e.relatedTarget.innerText === "Update"
-          ? ((updating = true),
-            (document.querySelector(".modal-title").innerText = "Update Card"))
-          : ((updating = false),
-            (document.querySelector(".modal-title").innerText = "Create Card"));
-
-        saveModalBtn.addEventListener("click", () => {
-          if (!updating) {
-            existingCars.push({
-              id: existingCars.length,
-              image: document.querySelector("#imageUrl").value,
-              title: document.querySelector("#title").value,
-              description: document.querySelector("#description").value,
-            });
-
-            localStorage.setItem("cars", JSON.stringify(existingCars));
-          } else {
-            let foundCar = existingCars.find(
-              (car) =>
-                car.id ===
-                Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
-            );
-
-            foundCar.image = document.querySelector("#imageUrl").value;
-            foundCar.title = document.querySelector("#title").value;
-            foundCar.description = document.querySelector("#description").value;
-
-            localStorage.setItem("cars", JSON.stringify(existingCars));
-          }
-
-          location.reload();
-        });
-      });
-
-      createUpdateModal.addEventListener("hide.bs.modal", (e) => {
-        oldModalBtn = saveModalBtn;
-        newModalBtn = oldModalBtn.cloneNode(true);
-        oldModalBtn.parentNode.replaceChild(newModalBtn, oldModalBtn);
-        saveModalBtn = newModalBtn;
-      });
     </script>
   </body>
 </html>

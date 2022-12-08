@@ -20,7 +20,7 @@ function flipCard() {
 function isMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     if(isMatch)
-        disableCard();
+        setTimeout(disableCard, 2000);
     else
         turnBack();
 }
@@ -28,8 +28,9 @@ function isMatch() {
 function disableCard() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    firstCard.style.opacity ="0";                                   /* turning off first card */
-    secondCard.style.opacity ="0";                                  /* turning off second card */
+
+    firstCard.style.opacity ="0";                                   /* turning off cards */
+    secondCard.style.opacity ="0";                                                                  
     resetGame();
 }
 
