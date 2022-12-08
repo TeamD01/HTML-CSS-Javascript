@@ -20,7 +20,7 @@ function flipCard() {
 function isMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     if(isMatch)
-        setTimeout(disableCard, 2000);
+        setTimeout(disableCard, 1000);                                 /* pause before remove */
     else
         turnBack();
 }
