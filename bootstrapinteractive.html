@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Holiday Cookies</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,20 +16,25 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-
+   
     <style>
       .row {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+      }
+
+      .navbar-brand, .container-fluid {
+        background-color: red;
       }
 
       body {
-         background-image: url(http://hannahbakescakes.co.uk/wp-content/uploads/2015/11/Snow-Falling-Background.gif);
+         background-image: url(https://i.pinimg.com/originals/0f/77/8b/0f778b1aa0c02508e50d8238bff946d4.gif);
           background-repeat: no-repeat;
           background-size: cover;
       }
     </style>
+    
   </head>
-
+  
   <!-- Add a navbar with a button that says "Add" -->
   <!-- when add button is clicked a modal will appear -->
   <!-- Add form to to modal -->
@@ -42,11 +47,12 @@
   <!-- When delete button is clicked, a modal will ask "Are you sure you want to delete? - there will be two buttons that say "Confirm or Cancel"" -->
 
   <body>
+    
     <div class="container">
       <header>
         <nav class="navbar bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand">Cookies</a>
+            <a class="navbar-brand">Holiday Cookies</a>
             <!-- Button trigger modal -->
             <button
                 type="button"
@@ -138,10 +144,10 @@
           </div>
         </nav>
       </header>
-
+      
       <main>
         <div class="row"></div>
-
+        
         <!-- Delete Modal -->
         <!-- Modal -->
         <div
@@ -215,9 +221,9 @@
       var description = document.querySelector("#description").value;
       var existingCookies = [];
 
-      JSON.parse(localStorage.getItem("cars")) === null
+      JSON.parse(localStorage.getItem("cookies")) === null
         ? (existingCookies = [])
-        : (existingCookies = JSON.parse(localStorage.getItem("cars")));
+        : (existingCookies = JSON.parse(localStorage.getItem("cookies")));
 
       for (i = 0; i < existingCookies.length; i++) {
         cookieCard = `
@@ -259,14 +265,13 @@
 
       deleteModal.addEventListener("show.bs.modal", (e) => {
         deleteModalBtn.addEventListener("click", () => {
-          let foundCar = existingCookies.find(
-            (car) =>
-              car.id ===
-              Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
+          let foundCookies = existingCookies.find(
+            (cook) =>
+              cook.id === Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
           );
-          existingCookies.splice(existingCookies.indexOf(foundCar), 1);
+          existingCookies.splice(existingCookies.indexOf(foundCookies), 1);
 
-          localStorage.setItem("cars", JSON.stringify(existingCookies));
+          localStorage.setItem("cookies", JSON.stringify(existingCookies));
           location.reload();
         });
       });
@@ -294,19 +299,18 @@
               description: document.querySelector("#description").value,
             });
 
-            localStorage.setItem("cars", JSON.stringify(existingCookies));
+            localStorage.setItem("cookies", JSON.stringify(existingCookies));
           } else {
-            let foundCar = existingCookies.find(
-              (car) =>
-                car.id ===
-                Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
+            let foundCookies = existingCookies.find(
+              (cook) =>
+                cook.id === Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
             );
 
-            foundCar.image = document.querySelector("#imageUrl").value;
-            foundCar.title = document.querySelector("#title").value;
-            foundCar.description = document.querySelector("#description").value;
+            foundCookies.image = document.querySelector("#imageUrl").value;
+            foundCookies.title = document.querySelector("#title").value;
+            foundCookies.description = document.querySelector("#description").value;
 
-            localStorage.setItem("cars", JSON.stringify(existingCookies));
+            localStorage.setItem("cookies", JSON.stringify(existingCookies));
           }
 
           location.reload();
