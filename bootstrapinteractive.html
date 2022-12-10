@@ -70,8 +70,7 @@
                 id="createUpdateModal"
                 tabindex="-1"
                 aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -293,24 +292,20 @@
         saveModalBtn.addEventListener("click", () => {
           if (!updating) {
             existingCookies.push({
-              id: existingCookies.length,
-              image: document.querySelector("#imageUrl").value,
-              title: document.querySelector("#title").value,
-              description: document.querySelector("#description").value,
+                id: existingCookies.length,
+                image: document.querySelector("#imageUrl").value,
+                title: document.querySelector("#title").value,
+                description: document.querySelector("#description").value,
             });
 
             localStorage.setItem("cookies", JSON.stringify(existingCookies));
-          } else {
-            let foundCookies = existingCookies.find(
-              (cook) =>
-                cook.id === Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
-            );
-
-            foundCookies.image = document.querySelector("#imageUrl").value;
-            foundCookies.title = document.querySelector("#title").value;
-            foundCookies.description = document.querySelector("#description").value;
-
-            localStorage.setItem("cookies", JSON.stringify(existingCookies));
+          } 
+          else {
+              let foundCookies = existingCookies.find((cook) =>cook.id === Number.parseInt(e.relatedTarget.closest(".card").dataset.carId));
+              foundCookies.image = document.querySelector("#imageUrl").value;
+              foundCookies.title = document.querySelector("#title").value;
+              foundCookies.description = document.querySelector("#description").value;
+              localStorage.setItem("cookies", JSON.stringify(existingCookies));
           }
 
           location.reload();
@@ -321,7 +316,7 @@
         oldModalBtn = saveModalBtn;
         newModalBtn = oldModalBtn.cloneNode(true);
         oldModalBtn.parentNode.replaceChild(newModalBtn, oldModalBtn);
-        saveModalBtn = newModalBtn;
+          saveModalBtn = newModalBtn;
       });
     </script>
   </body>
