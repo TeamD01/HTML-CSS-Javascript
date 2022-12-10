@@ -24,6 +24,6 @@ memeDiv.innerHTML = `<div id="memeImg">
             `       ;
     
 document.querySelector(".row").insertAdjacentElement("beforeend", memeDiv);
-/*console.log(memeObject);*/
+
 return { memeObject };
 }
