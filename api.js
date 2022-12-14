@@ -1,6 +1,7 @@
 const client_id = "nd4O68YcKTEuAs2-eH-34EpJgYJ9LLOLFW7zC2HIXnU";
 const searchStr = "cars";
 
+
 fetch(
   `https://api.unsplash.com/search/photos?query=${searchStr}&per_page=20&client_id=${client_id}`
 )
